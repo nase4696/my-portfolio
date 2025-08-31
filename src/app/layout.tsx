@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
@@ -43,11 +44,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="h-full">
+    <html className="h-full" lang="ja">
       <body
         className={cn(
           "flex flex-col h-full bg-orange-100",
-          fontNotoSansJP.className
+          fontNotoSansJP.className,
         )}
       >
         {children}
