@@ -3,6 +3,7 @@ export default function Home() {
     <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
       <div>
         <h1>Hello World</h1>
+        <p>フォント確認</p>
       </div>
     </main>
   );

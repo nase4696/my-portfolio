@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 
-const fontNotoSansJP = Noto_Sans_JP({
+const fontMontserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-heading",
+});
+
+const fontInter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -47,8 +55,11 @@ export default async function RootLayout({
     <html className="h-full" lang="ja">
       <body
         className={cn(
-          "flex flex-col h-full bg-orange-100",
-          fontNotoSansJP.className,
+          "flex flex-col h-full",
+          "bg-background text-text",
+          fontInter.variable,
+          fontMontserrat.variable,
+          "font-sans",
         )}
       >
         {children}
