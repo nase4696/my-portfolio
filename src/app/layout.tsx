@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { Header } from "@/components/layout/header";
 
 const fontMontserrat = Montserrat({
   subsets: ["latin"],
@@ -52,17 +54,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="h-full" lang="ja">
+    <html className="h-full" lang="ja" suppressHydrationWarning>
       <body
         className={cn(
           "flex flex-col h-full",
-          "bg-background text-text",
           fontInter.variable,
           fontMontserrat.variable,
           "font-sans",
         )}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
