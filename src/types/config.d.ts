@@ -13,6 +13,7 @@ export type MobileNavConfig = {
 };
 
 export type SiteConfig = {
+  title: string;
   name: string;
   description: string;
   url: string;
