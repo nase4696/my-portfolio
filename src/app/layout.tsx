@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 const fontMontserrat = Montserrat({
   subsets: ["latin"],
@@ -21,14 +22,14 @@ const fontInter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
   },
   description: siteConfig.description,
   keywords: ["Next.js", "React", "TailwindCSS", "shadcn/ui", "ポートフォリオ"],
   authors: [
     {
-      name: "nase",
+      name: siteConfig.name,
       url: siteConfig.url,
     },
   ],
@@ -36,15 +37,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja",
     url: siteConfig.url,
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
-    siteName: siteConfig.name,
+    siteName: siteConfig.title,
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
-    creator: "nase",
+    creator: siteConfig.name,
   },
 };
 
@@ -65,7 +66,8 @@ export default async function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          {children}
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
