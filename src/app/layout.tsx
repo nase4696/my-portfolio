@@ -55,10 +55,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="h-full" lang="ja" suppressHydrationWarning>
+    <html className="min-h-screen" lang="ja" suppressHydrationWarning>
       <body
         className={cn(
-          "flex flex-col h-full",
+          "flex flex-col min-h-screen",
           fontInter.variable,
           fontMontserrat.variable,
           "font-sans",
@@ -66,7 +66,7 @@ export default async function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

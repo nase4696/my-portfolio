@@ -5,8 +5,8 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray-200 dark:border-gray-600 py-4 md:py-8">
-      <div className="text-center md:text-left">
-        ©︎{currentYear} {siteConfig.name}.
+      <div className="container mx-auto text-center">
+        ©︎{currentYear} {siteConfig.name}. All rights reserved.
       </div>
     </footer>
   );
