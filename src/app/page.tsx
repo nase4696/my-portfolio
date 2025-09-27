@@ -1,9 +1,9 @@
+import { HeroSection } from "@/components/sections/hero-section";
+
 export default function Home() {
   return (
-    <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </main>
+    <div className="flex flex-col w-full">
+      <HeroSection />
+    </div>
   );
 }
