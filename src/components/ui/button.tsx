@@ -56,4 +56,9 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
+type ButtonStyleProps = Pick<
+  VariantProps<typeof buttonVariants>,
+  "variant" | "size"
+>;
+
+export { Button, buttonVariants, type ButtonStyleProps };

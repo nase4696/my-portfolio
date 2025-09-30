@@ -8,6 +8,6 @@ export const siteConfig: SiteConfig = {
   ogImage: "",
   links: {
     x: "",
-    github: "",
+    github: "https://github.com/nase4696",
   },
 };

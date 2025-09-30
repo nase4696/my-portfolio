@@ -1,10 +1,13 @@
+import { SocialLinks } from "../component/social-links";
 import { Icons } from "../icon";
 
 export function HeroSection() {
   return (
-    <section className="min-h-[calc(100vh-3.5rem)] w-full flex items-center justify-center px-4 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section className="relative min-h-[calc(100vh-3.5rem)] w-full flex items-center justify-center px-4 bg-gradient-to-br from-blue-100 to-white dark:from-blue-900/70 dark:to-gray-500">
       <div className="text-center container mx-auto flex flex-col items-center">
-        {/* プロフィール表示 - 写真またはイラスト、アバターに今後差し替える */}
+        <div className="absolute hidden md:flex md:top-3 md:right-3 items-center gap-3">
+          <SocialLinks />
+        </div>
         <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-2 md:mb-8 flex items-center justify-center shadow-lg">
           <span className="text-4xl font-bold text-white">NS</span>
         </div>
@@ -13,7 +16,7 @@ export function HeroSection() {
           NS
         </h1>
 
-        <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
+        <h2 className="text-xl md:text-2xl text-foreground mb-6">
           製造業からWebエンジニアへ
         </h2>
         <div>
