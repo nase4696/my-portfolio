@@ -2,16 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { VariantProps } from "class-variance-authority";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, ButtonStyleProps } from "@/components/ui/button";
 import { Icons } from "@/components/icon";
 import { cn } from "@/lib/utils";
-
-type ButtonStyleProps = Pick<
-  VariantProps<typeof buttonVariants>,
-  "variant" | "size"
->;
 
 type ThemeToggleProps = ButtonStyleProps & {
   className?: string;
