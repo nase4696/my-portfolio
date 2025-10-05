@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function AboutSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900" id="about">
+    <section className="py-20" id="about">
       <div className="container mx-auto px-2 md:px-4 max-w-4xl">
         <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
 

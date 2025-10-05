@@ -21,7 +21,7 @@ export function MobileNav({ items }: MobileNavProps) {
     <div>
       <Menubar>
         <MenubarMenu>
-          <MenubarTrigger>
+          <MenubarTrigger area-label="メニューを開く">
             <Icons.menu />
           </MenubarTrigger>
           <MenubarContent>
